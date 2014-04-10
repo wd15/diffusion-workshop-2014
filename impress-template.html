@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Simulation Management</title>
+    <link href="impress-style.css" rel="stylesheet" />
+    <!-- <link href="speed.css" rel="stylesheet" /> -->
+    <link href="sourcecode.css" rel="stylesheet" />
+</head>
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+   impress.js is not supported by your browser, sorry.
+</div>
+
+<div id="impress">
+$body$
+</div>
+
+<script src="$impress-url$/js/impress.js"></script>
+$if(math)$
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$$","$$"],["\\(","\\)"]]}
+  });
+</script>
+$math$
+$endif$
+
+<script>impress().init();</script>
+</body>
+</html>
