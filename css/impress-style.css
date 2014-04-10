@@ -213,7 +213,7 @@ a:focus {
 }
 
 #automate {
-    background-image:url('labbook.png');
+    background-image:url('../images/labbook.png');
     background-size: 100%;
     background-repeat: no-repeat;
 }
