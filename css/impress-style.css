@@ -70,31 +70,9 @@ body {
     /* min-height: 740px; */
     font-family: 'PT Sans', sans-serif;
     min-height: 740px;
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#eee), to(#fff));
-    background: -webkit-radial-gradient(#eee, #fff);
-    background:    -moz-radial-gradient(#eee, #fff);
-    background:     -ms-radial-gradient(#eee, #fff);
-    background:      -o-radial-gradient(#eee, #fff);
-    background:         radial-gradient(#eee, #fff);
+    background-color: rgb(215, 215, 215);
     color: #2f2f2f;
-    /* text-transform: uppercase; */
 }
-
-
-/* body { */
-/*     font-family: 'PT Sans', sans-serif; */
-/*     min-height: 740px; */
-/*     /\* background-color: transparent; *\/ */
-/*     /\* background-color:grey; *\/ */
-/* /\* #    background-image:url('labbook.png'); *\/ */
-/*     /\* background-size: 100%; *\/ */
-/*     /\* background-repeat: no-repeat; *\/ */
-/*     /\* opacity: 0.99; *\/ */
-/*     background: radial-gradient(#F0F0F0, #BEBEBE) repeat scroll 0% 0% transparent; */
-/* } */
-
-
 
 b, strong { font-weight: bold }
 i, em { font-style: italic }
@@ -155,8 +133,10 @@ a:focus {
     box-sizing:         border-box;
 
     font-family: 'PT Serif', georgia, serif;
-    font-size: 32px;
+    font-size: 44px;
     line-height: 1.5;
+
+
 }
 
 .impress-enabled .step {
@@ -179,10 +159,8 @@ a:focus {
     height: 700px;
     padding: 40px 60px;
 
-    /* background-color: transparent; */
     border: 0px solid rgba(0, 0, 0, .3);
     border-radius: 10px;
-    /* box-shadow: 0 2px 6px rgba(0, 0, 0, .1); */
 
     color: black;
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
@@ -205,12 +183,7 @@ a:focus {
     white-space: nowrap;
 }
 
-#overview {
-    width: 1500px;
-    height: 1000px;
-    /* background-color: white; */
-    /* opacity: 0.5; */
-}
+#overview {}
 
 #automate {
     background-image:url('../images/labbook.png');
@@ -228,7 +201,7 @@ a:focus {
 
 .title {
     text-align: center;
-    font-size: 80px;
+    font-size: 100px;
 }
 
 .author { 
@@ -242,9 +215,40 @@ a:focus {
     font-weight: bold;   
     background: transparent;
     color: black;
-    /* font-family: 'Open Sans', Arial, monospace; */
     border: 0px solid green;
-    /* font-family: 'Lucida Console', Monaco, monospace */
-    /* font-family: "Courier New", Courier, monospace; */
 }
 
+p.footer {
+    text-align: right;
+    font-size: 1.0em;
+    margin-top: 4em;
+    font-size: 34px;
+}
+
+#title {
+    background:url('../images/nist_logo.png') bottom center no-repeat;
+    background-position:fixed;
+    background-color: rgb(215, 215, 215);
+}
+
+.up-triangle {
+    position:relative;
+    left:190px;
+    top: 210px;
+    width: 0px; 
+    height: 0px; 
+    border-bottom: 250px solid #acacac;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+}
+
+.step img.center {
+    display: block;
+    max-width: 80%;
+    max-height: 600px;
+    margin-top: -150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+
+}
