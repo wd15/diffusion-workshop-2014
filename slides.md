@@ -61,21 +61,23 @@ reviewers with a little "reproducible!" tick mark.
 <br>
 ideas by *C. Titus Brown*
 
-# Orthogonal Issues {.step data-y=2500}
+# Orthogonal Issues {#orthogonal .step .alwaysshow data-y=2500}
 
 <div class="up-triangle"></div>
 
-# Workflow Control {.step data-y=2710 data-x=180}
+# Workflow Control {.step .alwaysshow data-y=2710 data-x=180}
 
-# Scientific Workflow {.step data-y=2300 data-x=240 data-scale=0.2}
+# Scientific Workflow {.step data-y=2000 data-x=500 data-scale=0.2}
 
 <img class="center" src="images/workflow.png"></img>
 
-# {#versioncontrol .step data-y=2710 data-x=-680 data-rotate-z="45"}
+<!-- # {#versioncontrol .step .alwaysshow data-y=2910 data-x=-680 data-rotate-z="45"} -->
 
+# Version Control {.step .alwaysshow data-y=3110 data-x=-280 data-rotate-z="45"}
 
-# Version Control {.step data-y=3110 data-x=-280 data-rotate-z="45"}
+# {#vc .step data-y=3110 data-x=-280 data-rotate-z="45"}
 
+<img class="vc" src="images/stack-of-files.png"></img>
 <br>
 maintains history of workflow changes 
 <br>
@@ -91,12 +93,12 @@ integrated into many scientific workflows
 ~~~~{.console}
 $ git init
 $ git add file.txt
-$ git ci -m "empty"
+$ git ci -m "add file.txt"
 $ edit file.txt
-$ git ci -am "hello"
+$ git ci -am "edit file.txt"
 $ git log
-12e3c2618143 hello
-e00433e69a43 empty
+12e3c2618143 add file.txt
+e00433e69a43 edit file.txt
 $ git push github master
 ~~~~
 
@@ -104,7 +106,9 @@ $ git push github master
 
 ![](images/network.png)
 
-# Event Control {.step data-rotate-z="-45" data-y=2700 data-x=560 }
+# Event Control {.step .alwaysshow data-rotate-z="-45" data-y=2700 data-x=560 }
+
+# {.step data-rotate-z="-45" data-y=2700 data-x=560 }
 
 provide a **unique ID (SHA checksum)** for every workflow execution
 <br>
@@ -117,6 +121,56 @@ independent from **workflow control** and **version control**
 <br>
 partial solution: **Sumatra**, a simulation management tool (not workflow)
 
+# Sumatra {.step data-x=-1000 data-y=1200 data-scale=0.5}
+
+easy to use, doesn't change my workflow
+<br>
+<br>
+records the input parameters
+<br>
+<br>
+records the environment
+<br>
+<br>
+records the location of the data
+<br>
+<br>
+generates unique ID for each simulation
 
 
+# Easy to use {#wide .step data-x=-200 data-y=1200 data-scale=0.5}
+
+~~~~{.console}
+$ smt smt-demo
+$ smt configure --executable=python --main=script.py
+$ smt run --tag=demo -reason="create demo record" params.json wait=3
+Record label for this run: '0c50797f1e3f'
+No data produced.
+Created Django record store using SQLite
+~~~~
+
+# Easy to use {#wide .step data-x=-200 data-y=1200 data-scale=0.5}
+
+~~~~{.console}
+$ smt list --long
+--------------------------------------------------------------------------------
+Label            : 0c50797f1e3f
+Timestamp        : 2014-04-18 17:36:32.108523
+Reason           : create demo record
+Outcome          : 
+Duration         : 3.02929711342
+Repository       : GitRepository at /home/wd15/git/diffusion-workshop-2014/tmp
+Main_File        : script.py
+Version          : 79659c919c942b96307094c4a3065cd5eec32562
+Script_Arguments : <parameters>
+Executable       : Python (version: 2.7.6) at /home/wd15/anaconda/bin/python
+Parameters       : wait = 3
+Input_Data       : []
+Launch_Mode      : serial
+Output_Data      : []
+User             : Daniel Wheeler <daniel.wheeler2@gmail.com>
+Tags             : demo
+Repeats          : None
+
+~~~~
 

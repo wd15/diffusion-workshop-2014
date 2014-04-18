@@ -140,9 +140,20 @@ a:focus {
 
 }
 
+.alwaysshow { 
+    opacity: 1.0;
+}
+
+
+/* fade out inactive slides */
+/* .step:not(.active) { opacity: 0.3; } */
+/* .step.alwaysshwo:not(.active) { opacity: 0; } */
+.step:not(.active) { opacity: 0.0; }
+.step.alwaysshow:not(.active) { opacity: 1.0; }
+
 .impress-enabled .step {
     margin: 0;
-    opacity: 0.5;
+    opacity: 0.0;
 
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;
@@ -151,7 +162,7 @@ a:focus {
     transition:         opacity 1s;
 }
 
-.impress-enabled .step.active { opacity: 1 }
+.impress-enabled .step.active { opacity: 1}
 
 .slide {
     display: block;
@@ -227,6 +238,7 @@ p.footer {
     background:url('../images/nist_logo.png') bottom center no-repeat;
     background-position:fixed;
     background-color: rgb(215, 215, 215);
+    opacity: 1;
 }
 
 .up-triangle {
@@ -240,6 +252,7 @@ p.footer {
     border-bottom: 250px solid #2ca25f;
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
+    opacity: 1.0;
 }
 
 .step img.center {
@@ -250,15 +263,29 @@ p.footer {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-
 }
 
 .small {
     font-size: 20px;
 }
 
-#versioncontrol {
-    background-image:url('../images/stack-of-files.png');
-    background-size: 50%;
-    background-repeat: no-repeat;
+.step img.vc {
+    display: block;
+    max-width: 50%;
+    max-height: 600px;
+    margin-top: -0px;
+    margin-left: -100px;
+    margin-right: auto;
+    padding: 20px;
+    float: left;
 }
+
+#vc {
+     width: 1200px; 
+}
+
+#wide {
+     width: 1400px; 
+     height: 1000px;
+}
+
