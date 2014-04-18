@@ -58,6 +58,7 @@ h1 {
    color: black;
    background-color: transparent;
    min-height: 50px;
+   font-size: 120%;
 }
 
 table {
@@ -210,12 +211,9 @@ a:focus {
 }
 
 .twitter {
-    text-align: center;
-    font-size: 20px;
     font-weight: bold;   
     background: transparent;
     color: black;
-    border: 0px solid green;
 }
 
 p.footer {
@@ -237,7 +235,9 @@ p.footer {
     top: 210px;
     width: 0px; 
     height: 0px; 
-    border-bottom: 250px solid #acacac;
+    color:  #99d8c9;
+    /* border-bottom: 250px solid #acacac; */
+    border-bottom: 250px solid #2ca25f;
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
 }
@@ -246,9 +246,19 @@ p.footer {
     display: block;
     max-width: 80%;
     max-height: 600px;
-    margin-top: -150px;
+    margin-top: -50px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
 
+}
+
+.small {
+    font-size: 20px;
+}
+
+#versioncontrol {
+    background-image:url('../images/stack-of-files.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
