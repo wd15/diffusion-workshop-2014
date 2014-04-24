@@ -5,7 +5,7 @@
 # {#overview .step data-scale=8}
 
    
-# {#title .step data-y=-1000}
+# {#title .step data-y=-2500 data-scale=4}
 
 <p class="title">Simulation and Data Management</p>
 
@@ -40,7 +40,7 @@ interested in reproducible research
 <br>
 see <code class="twitter">@wd15dan</code>
 
-# Imagine... {.step data-y=200 data-x=2400}
+# Imagine... {.step .alwaysshow data-y=200 data-x=2400}
 
 <br>
 A declarative metadata standard<p class="small"> that you can use to
@@ -65,13 +65,15 @@ ideas by *C. Titus Brown*
 
 <div class="up-triangle"></div>
 
-# Workflow Control {.step .alwaysshow data-y=2710 data-x=180}
+# Workflow Control {.step .alwaysshow data-y=2720 data-x=180}
 
 # Scientific Workflow {.step data-y=2000 data-x=500 data-scale=0.2}
 
 <img class="center" src="images/workflow.png"></img>
 
 <!-- # {#versioncontrol .step .alwaysshow data-y=2910 data-x=-680 data-rotate-z="45"} -->
+
+# {.step .alwaysshow data-y=2500}
 
 # Version Control {.step .alwaysshow data-y=3110 data-x=-280 data-rotate-z="45"}
 
@@ -106,71 +108,142 @@ $ git push github master
 
 ![](images/network.png)
 
+# {.step .alwaysshow data-y=2500}  
+
 # Event Control {.step .alwaysshow data-rotate-z="-45" data-y=2700 data-x=560 }
 
 # {.step data-rotate-z="-45" data-y=2700 data-x=560 }
 
+<br>
 provide a **unique ID (SHA checksum)** for every workflow execution
 <br>
 <br>
 capture **meta-data**, not data
 <br>
 <br>
-independent from **workflow control** and **version control**
+**not** workflow control or version control
 <br>
 <br>
 partial solution: **Sumatra**, a simulation management tool (not workflow)
 
+# {.step .alwaysshow data-y=2500}  
+
 # Sumatra {.step data-x=-1000 data-y=1200 data-scale=0.5}
 
-easy to use, doesn't change my workflow
+<br>
+**doesn't change my workflow**
 <br>
 <br>
-records the input parameters
+records the **meta-data** (not the data): parameters, environment, data
+location, time stamps, output images, commit message, duration, data hash
 <br>
 <br>
-records the environment
-<br>
-<br>
-records the location of the data
-<br>
-<br>
-generates unique ID for each simulation
+generates **unique ID** for each simulation
 
-
-# Easy to use {#wide .step data-x=-200 data-y=1200 data-scale=0.5}
+# Easy to use {#easytouse1 .step data-x=-200 data-y=1200 data-scale=0.5}
 
 ~~~~{.console}
-$ smt smt-demo
+$ smt init smt-demo
 $ smt configure --executable=python --main=script.py
-$ smt run --tag=demo -reason="create demo record" params.json wait=3
+$ smt run --tag=demo --reason="create demo record" params.json wait=3
 Record label for this run: '0c50797f1e3f'
 No data produced.
 Created Django record store using SQLite
 ~~~~
 
-# Easy to use {#wide .step data-x=-200 data-y=1200 data-scale=0.5}
+# Easy to use {#easytouse2 .step data-x=-200 data-y=1200 data-scale=0.5}
 
 ~~~~{.console}
 $ smt list --long
---------------------------------------------------------------------------------
-Label            : 0c50797f1e3f
-Timestamp        : 2014-04-18 17:36:32.108523
+------------------------------------------------------------------------
+Label            : 6c9c7cd2bbc2
+Timestamp        : 2014-04-21 16:07:52.100838
 Reason           : create demo record
 Outcome          : 
-Duration         : 3.02929711342
-Repository       : GitRepository at /home/wd15/git/diffusion-workshop-2014/tmp
+Duration         : 3.26091217995
+Repository       : GitRepository at /home/wd15/git/diffusion-worksho ...
 Main_File        : script.py
-Version          : 79659c919c942b96307094c4a3065cd5eec32562
+Version          : 08d04df6a9b561eb146d3a7461f763869fdc48a7
 Script_Arguments : <parameters>
-Executable       : Python (version: 2.7.6) at /home/wd15/anaconda/bin/python
-Parameters       : wait = 3
+Executable       : Python (version: 2.7.6) at /home/wd15/anaconda/bi ...
+Parameters       : {
+                 :     "wait": 3
+                 : }
 Input_Data       : []
 Launch_Mode      : serial
 Output_Data      : []
 User             : Daniel Wheeler <daniel.wheeler2@gmail.com>
 Tags             : demo
 Repeats          : None
-
 ~~~~
 
+# Web Interface {#webinterface .step data-x=800 data-y=1200 data-scale=0.5}
+
+<iframe width="100%" height="100%" src="http://127.0.0.1:8000/" frameborder="0" border="0"> </iframe>
+
+# Sumatra + IPython + Pandas { .step data-x=1800 data-y=1200 data-scale=0.5}
+
+<br>
+high level data manipulation
+<br>
+<br>
+quickly mix parameters, meta-data and output data in a dataframe
+<br>
+<br>
+save Sumatra records as HDF file
+<br>
+<br>
+disseminate instantly using [nbviewer.ipython.org](http://nbviewer.ipython.org/)
+
+# Using Pandas {#usingpandas .step data-x=2800 data-y=1200 data-scale=0.5}
+
+~~~~{.console}
+$ smt export
+$ ipython
+~~~~
+~~~~{.python}
+>>> import json, pandas
+>>> with open('.smt/records_export.json') as f:
+...     data = json.load(f)     
+>>> df = pandas.DataFrame(data)
+>>> df[['label', 'duration', 'tags']]
+   label         duration  tags
+0  6c9c7cd2bbc2  3.260912  [demo]
+1  db8610f0c51f  3.248754  [demo]
+2  0fdaf12e0cb2  3.247553  [demo]
+3  9f488ce06d3e  0.239192  [demo]
+4  00e5252f1824  4.398588      []
+5  f56dbd93eceb  3.029297  [demo]
+6  0c50797f1e3f  3.017648      []
+~~~~
+
+# Using IPython {#webinterface2 .step data-x=3800 data-y=1200 data-scale=0.5}
+
+<iframe width="100%" height="100%" src="http://wd15.github.io/2013/05/07/extremefill2d/" frameborder="0" border="0"> </iframe>
+
+# {.step data-y=200 data-x=2400}
+
+# The Fantasy {.step data-x=3400 data-y=200 data-scale=0.5}
+
+<br>
+cloud service for Sumatra
+<br>
+<br>
+integrated with Github
+<br>
+<br>
+integrated with Buildbot
+<br>
+<br>
+integrated with a VM provider
+<br>
+<br>
+**sumatra-server 0.1.0** is out!  
+
+# Thanks! {.step data-x=4400 data-y=200 data-scale=0.5}
+
+<br>
+slides: [wd15.github.io/diffusion-workshop-2014](http://wd15.github.io/diffusion-workshop-2014/)
+<br>
+<br>
+parallel demo: [github.com/wd15/smt-demo](https://github.com/wd15/smt-demo)

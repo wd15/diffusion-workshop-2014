@@ -284,8 +284,31 @@ p.footer {
      width: 1200px; 
 }
 
-#wide {
+#easytouse1 {
      width: 1400px; 
      height: 1000px;
 }
 
+#easytouse2 {
+     width: 1400px; 
+     height: 1000px;
+}
+
+#webinterface {
+    width: 1800px; 
+    height: 1000px;
+}
+
+#usingpandas {
+    width: 1000px;
+    height: 700px;
+}
+
+#webinterface2{
+    width: 1800px; 
+    height: 1000px;
+}
+
+#thanks {
+    width: 1200px;
+}
