@@ -43,4 +43,6 @@ running a Sumatra server.
 ## Viewing Slides
 
 The slides can be viewed at
+[wd15.github.io/diffusion-workshop-2014](http://wd15.github.io/diffusion-workshop-2014)
+
 
