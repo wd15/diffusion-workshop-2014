@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Simulation Management</title>
+    <link href="css/impress-style.css" rel="stylesheet" />
+    <link href="css/sourcecode.css" rel="stylesheet" />
+</head>
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+   impress.js is not supported by your browser, sorry.
+</div>
+
+<div id="impress">
+<section id="overview" class="level1 step" data-scale="8">
+<h1><a href="#overview"></a></h1>
+</section>
+<section id="title" class="level1 step" data-y="-2500" data-scale="4">
+<h1><a href="#title"></a></h1>
+<p class="title">
+Simulation and Data Management
+</p>
+
+<p class="footer">
+    
+Daniel Wheeler • April 29, 2014 • Diffusion Workshop
+</p>
+
+
+</section>
+<section id="automate" class="level1 step" data-y="200" data-x="-800">
+<h1><a href="#automate"></a></h1>
+</section>
+<section id="automate" class="level1 step" data-y="200" data-x="-800">
+<h1><a href="#automate"></a></h1>
+<br>
+<p class="title"> 
+Automate
+</p>
+
+</section>
+<section id="about-me" class="level1 step" data-y="200" data-x="800">
+<h1><a href="#about-me">About me</a></h1>
+<p><br> scientific/academic code developer <br> <br> run/manage simulations (code monkey) <br> <br> an epic Pythonista (according to OSRC) <br> <br> interested in reproducible research <br> <br> see <code class="twitter"><span class="citation" data-cites="wd15dan">@wd15dan</span></code></p>
+</section>
+<section id="imagine..." class="level1 step alwaysshow" data-y="200" data-x="2400">
+<h1><a href="#imagine...">Imagine...</a></h1>
+<br> A declarative metadata standard
+<p class="small"> 
+that you can use to tell a Linux VM how to download your data, execute your computational analysis, and spin up an interface to a literate computing environment with the analysis preloaded. Then we can provide buttons on scientific papers that say &quot;run this analysis on Rackspace! or Amazon! Estimated cost: $25&quot;.
+</p>
+<br> Automated integration tests for papers
+<p class="small">
+where you provide the metadata to run your analysis while you're working on your paper and a service automatically pulls down your analysis source and data, runs it, and generates your figures for you to check. Then when the paper is ready to submit, the journal takes your metadata format and verifies it themselves, and passes it on to reviewers with a little &quot;reproducible!&quot; tick mark.
+</p>
+<p><br> ideas by <em>C. Titus Brown</em></p>
+</section>
+<section id="orthogonal" class="level1 step alwaysshow" data-y="2500">
+<h1><a href="#orthogonal">Orthogonal Issues</a></h1>
+<div class="up-triangle">
+
+</div>
+</section>
+<section id="workflow-control" class="level1 step alwaysshow" data-y="2720" data-x="180">
+<h1><a href="#workflow-control">Workflow Control</a></h1>
+</section>
+<section id="scientific-workflow" class="level1 step" data-y="2000" data-x="500" data-scale="0.2">
+<h1><a href="#scientific-workflow">Scientific Workflow</a></h1>
+<p><img class="center" src="images/workflow.png"></img></p>
+<!-- # {#versioncontrol .step .alwaysshow data-y=2910 data-x=-680 data-rotate-z="45"} -->
+
+</section>
+<section id="section" class="level1 step alwaysshow" data-y="2500">
+<h1><a href="#section"></a></h1>
+</section>
+<section id="version-control" class="level1 step alwaysshow" data-y="3110" data-x="-280" data-rotate-z="45">
+<h1><a href="#version-control">Version Control</a></h1>
+</section>
+<section id="vc" class="level1 step" data-y="3110" data-x="-280" data-rotate-z="45">
+<h1><a href="#vc"></a></h1>
+<p><img class="vc" src="images/stack-of-files.png"></img> <br> maintains history of workflow changes <br> <br> but not workflow usage <br> <br> integrated into many scientific workflows</p>
+</section>
+<section id="easy-to-use" class="level1 step" data-y="3200" data-x="-500" data-rotate-z="45" data-scale="0.2">
+<h1><a href="#easy-to-use">Easy to use</a></h1>
+<pre class="console"><code>$ git init
+$ git add file.txt
+$ git ci -m &quot;add file.txt&quot;
+$ edit file.txt
+$ git ci -am &quot;edit file.txt&quot;
+$ git log
+12e3c2618143 add file.txt
+e00433e69a43 edit file.txt
+$ git push github master</code></pre>
+</section>
+<section id="manage-complexity" class="level1 step" data-y="3350" data-x="-350" data-rotate-z="-45" data-scale="0.2">
+<h1><a href="#manage-complexity">Manage Complexity</a></h1>
+<figure>
+<img src="images/network.png" />
+</figure>
+</section>
+<section id="section-1" class="level1 step alwaysshow" data-y="2500">
+<h1><a href="#section-1"></a></h1>
+</section>
+<section id="event-control" class="level1 step alwaysshow" data-rotate-z="-45" data-y="2700" data-x="560">
+<h1><a href="#event-control">Event Control</a></h1>
+</section>
+<section id="section-2" class="level1 step" data-rotate-z="-45" data-y="2700" data-x="560">
+<h1><a href="#section-2"></a></h1>
+<p><br> provide a <strong>unique ID (SHA checksum)</strong> for every workflow execution <br> <br> capture <strong>meta-data</strong>, not data <br> <br> <strong>not</strong> workflow control or version control <br> <br> partial solution: <strong>Sumatra</strong>, a simulation management tool (not workflow)</p>
+</section>
+<section id="section-3" class="level1 step alwaysshow" data-y="2500">
+<h1><a href="#section-3"></a></h1>
+</section>
+<section id="sumatra" class="level1 step" data-x="-1000" data-y="1200" data-scale="0.5">
+<h1><a href="#sumatra">Sumatra</a></h1>
+<p><br> <strong>doesn't change my workflow</strong> <br> <br> records the <strong>meta-data</strong> (not the data): parameters, environment, data location, time stamps, output images, commit message, duration, data hash <br> <br> generates <strong>unique ID</strong> for each simulation</p>
+</section>
+<section id="easytouse1" class="level1 step" data-x="-200" data-y="1200" data-scale="0.5">
+<h1><a href="#easytouse1">Easy to use</a></h1>
+<pre class="console"><code>$ smt init smt-demo
+$ smt configure --executable=python --main=script.py
+$ smt run --tag=demo --reason=&quot;create demo record&quot; params.json wait=3
+Record label for this run: &#39;0c50797f1e3f&#39;
+No data produced.
+Created Django record store using SQLite</code></pre>
+</section>
+<section id="easytouse2" class="level1 step" data-x="-200" data-y="1200" data-scale="0.5">
+<h1><a href="#easytouse2">Easy to use</a></h1>
+<pre class="console"><code>$ smt list --long
+------------------------------------------------------------------------
+Label            : 6c9c7cd2bbc2
+Timestamp        : 2014-04-21 16:07:52.100838
+Reason           : create demo record
+Outcome          : 
+Duration         : 3.26091217995
+Repository       : GitRepository at /home/wd15/git/diffusion-worksho ...
+Main_File        : script.py
+Version          : 08d04df6a9b561eb146d3a7461f763869fdc48a7
+Script_Arguments : &lt;parameters&gt;
+Executable       : Python (version: 2.7.6) at /home/wd15/anaconda/bi ...
+Parameters       : {
+                 :     &quot;wait&quot;: 3
+                 : }
+Input_Data       : []
+Launch_Mode      : serial
+Output_Data      : []
+User             : Daniel Wheeler &lt;daniel.wheeler2@gmail.com&gt;
+Tags             : demo
+Repeats          : None</code></pre>
+</section>
+<section id="webinterface" class="level1 step" data-x="800" data-y="1200" data-scale="0.5">
+<h1><a href="#webinterface">Web Interface</a></h1>
+<iframe width="100%" height="100%" src="http://127.0.0.1:8000/" frameborder="0" border="0"> </iframe>
+
+</section>
+<section id="sumatra-ipython-pandas" class="level1 step" data-x="1800" data-y="1200" data-scale="0.5">
+<h1><a href="#sumatra-ipython-pandas">Sumatra + IPython + Pandas</a></h1>
+<p><br> high level data manipulation <br> <br> quickly mix parameters, meta-data and output data in a dataframe <br> <br> save Sumatra records as HDF file <br> <br> disseminate instantly using <a href="http://nbviewer.ipython.org/">nbviewer.ipython.org</a></p>
+</section>
+<section id="usingpandas" class="level1 step" data-x="2800" data-y="1200" data-scale="0.5">
+<h1><a href="#usingpandas">Using Pandas</a></h1>
+<pre class="console"><code>$ smt export
+$ ipython</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="ch">import</span> json, pandas
+&gt;&gt;&gt; <span class="kw">with</span> <span class="dt">open</span>(<span class="st">&#39;.smt/records_export.json&#39;</span>) <span class="ch">as</span> f:
+...     data = json.load(f)     
+&gt;&gt;&gt; df = pandas.DataFrame(data)
+&gt;&gt;&gt; df[[<span class="st">&#39;label&#39;</span>, <span class="st">&#39;duration&#39;</span>, <span class="st">&#39;tags&#39;</span>]]
+   label         duration  tags
+<span class="dv">0</span>  6c9c7cd2bbc2  <span class="fl">3.260912</span>  [demo]
+<span class="dv">1</span>  db8610f0c51f  <span class="fl">3.248754</span>  [demo]
+<span class="dv">2</span>  0fdaf12e0cb2  <span class="fl">3.247553</span>  [demo]
+<span class="dv">3</span>  9f488ce06d3e  <span class="fl">0.239192</span>  [demo]
+<span class="dv">4</span>  00e5252f1824  <span class="fl">4.398588</span>      []
+<span class="dv">5</span>  f56dbd93eceb  <span class="fl">3.029297</span>  [demo]
+<span class="dv">6</span>  0c50797f1e3f  <span class="fl">3.017648</span>      []</code></pre>
+</section>
+<section id="webinterface2" class="level1 step" data-x="3800" data-y="1200" data-scale="0.5">
+<h1><a href="#webinterface2">Using IPython</a></h1>
+<iframe width="100%" height="100%" src="http://wd15.github.io/2013/05/07/extremefill2d/" frameborder="0" border="0"> </iframe>
+
+</section>
+<section id="section-4" class="level1 step" data-y="200" data-x="2400">
+<h1><a href="#section-4"></a></h1>
+</section>
+<section id="the-fantasy" class="level1 step" data-x="3400" data-y="200" data-scale="0.5">
+<h1><a href="#the-fantasy">The Fantasy</a></h1>
+<p><br> cloud service for Sumatra <br> <br> integrated with Github <br> <br> integrated with Buildbot <br> <br> integrated with a VM provider <br> <br> <strong>sumatra-server 0.1.0</strong> is out!</p>
+</section>
+<section id="thanks" class="level1 step" data-x="4400" data-y="200" data-scale="0.5">
+<h1><a href="#thanks">Thanks!</a></h1>
+<p><br> slides: <a href="http://wd15.github.io/diffusion-workshop-2014/">wd15.github.io/diffusion-workshop-2014</a> <br> <br> parallel demo: <a href="https://github.com/wd15/smt-demo">github.com/wd15/smt-demo</a></p>
+</section>
+</div>
+
+<script src="impress.js/js/impress.js"></script>
+
+<script>impress().init();</script>
+</body>
+</html>
