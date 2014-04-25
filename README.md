@@ -25,10 +25,7 @@ important of these are listed. The version numbers are mostly not
 important within reason, but if you have problems the version numbers
 may help.
 
-  * Impress.js version `d505df4e`
-  * Mathjax version `f3aaf3a2`
   * Pandoc version 1.12.2.1
-  
  
 ## Compiling Slides
 
@@ -36,8 +33,6 @@ To build:
  
     $ git clone https://github.com/wd15/diffusion-workshop-2014.git
     $ cd diffusion-workshop-2014
-    $ git clone https://github.com/mathjax/MathJax.git
-    $ git clone https://github.com/bartaz/impress.js.git
     $ make slides.html
 
 ## Issues
@@ -47,5 +42,5 @@ running a Sumatra server.
 
 ## Viewing Slides
 
-The slides can be viewed at 
+The slides can be viewed at
 
