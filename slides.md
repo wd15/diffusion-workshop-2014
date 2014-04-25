@@ -206,18 +206,17 @@ $ ipython
 >>> with open('.smt/records_export.json') as f:
 ...     data = json.load(f)     
 >>> df = pandas.DataFrame(data)
->>> df[['label', 'duration', 'tags']]
+>>> custom_df = df[['label', 'duration', 'tags']]
+>>> custom_df
    label         duration  tags
 0  6c9c7cd2bbc2  3.260912  [demo]
 1  db8610f0c51f  3.248754  [demo]
 2  0fdaf12e0cb2  3.247553  [demo]
-3  9f488ce06d3e  0.239192  [demo]
-4  00e5252f1824  4.398588      []
-5  f56dbd93eceb  3.029297  [demo]
-6  0c50797f1e3f  3.017648      []
+...
+>>> custom_df.to_hdf('records.h5')
 ~~~~
 
-# Using IPython {#webinterface2 .step data-x=3800 data-y=1200 data-scale=0.5}
+# Using IPython {#webinterface2 .step data-x=3800 data-py=1200 data-scale=0.5}
 
 <iframe width="100%" height="100%" src="http://wd15.github.io/2013/05/07/extremefill2d/" frameborder="0" border="0"> </iframe>
 
@@ -229,13 +228,7 @@ $ ipython
 cloud service for Sumatra
 <br>
 <br>
-integrated with Github
-<br>
-<br>
-integrated with Buildbot
-<br>
-<br>
-integrated with a VM provider
+integrated with Github, Buildbot and a VM provider
 <br>
 <br>
 **sumatra-server 0.1.0** is out!  
