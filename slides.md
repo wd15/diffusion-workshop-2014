@@ -23,7 +23,7 @@
 <br>
 <p class="title"> Automate </p>
 
-# About me {.step data-y=200 data-x=800}
+# About me {#aboutme .step data-y=200 data-x=800}
 
 <br>
 scientific/academic code developer
@@ -35,10 +35,10 @@ run/manage simulations (code monkey)
 an epic Pythonista (according to OSRC)
 <br>
 <br>
-interested in reproducible research
+FiPy developer
 <br>
 <br>
-see <code class="twitter">@wd15dan</code>
+interested in reproducible research, see <code class="twitter">@wd15dan</code>
 
 # Imagine... {.step .alwaysshow data-y=200 data-x=2400}
 
@@ -87,7 +87,7 @@ maintains history of workflow changes
 but not workflow usage
 <br>
 <br>
-integrated into many scientific workflows
+already integrated into the scientific development process
 
 # Easy to use {.step data-y=3200 data-x=-500 data-rotate-z="45" data-scale=0.2}
 
@@ -104,7 +104,7 @@ e00433e69a43 edit file.txt
 $ git push github master
 ~~~~
 
-# Manage Complexity {.step data-y=3350 data-x=-350 data-rotate-z="-45" data-scale=0.2}
+# Manage Complexity {#managecomplexity .step data-y=3350 data-x=-350 data-rotate-z="-45" data-scale=0.2}
 
 ![](images/network.png)
 
@@ -135,7 +135,7 @@ partial solution: **Sumatra**, a simulation management tool (not workflow)
 <br>
 <br>
 records the **meta-data** (not the data): parameters, environment, data
-location, time stamps, output images, commit message, duration, data hash
+location, time stamps, commit message, duration, data hash
 <br>
 <br>
 generates **unique ID** for each simulation
@@ -145,6 +145,7 @@ generates **unique ID** for each simulation
 ~~~~{.console}
 $ smt init smt-demo
 $ smt configure --executable=python --main=script.py
+$ # python script.py params.json
 $ smt run --tag=demo --reason="create demo record" params.json wait=3
 Record label for this run: '0c50797f1e3f'
 No data produced.
