@@ -217,7 +217,7 @@ $ ipython
 >>> custom_df.to_hdf('records.h5')
 ~~~~
 
-# Using IPython {#webinterface2 .step data-x=3800 data-py=1200 data-scale=0.5}
+# Using IPython {#webinterface2 .step data-x=3800 data-y=1200 data-scale=0.5}
 
 <iframe width="100%" height="100%" src="http://wd15.github.io/2013/05/07/extremefill2d/" frameborder="0" border="0"> </iframe>
 
