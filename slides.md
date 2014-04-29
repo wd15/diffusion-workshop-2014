@@ -7,7 +7,7 @@
    
 # {#title .step data-y=-2500 data-scale=4}
 
-<p class="title">Simulation and Data Management</p>
+<p class="title">Simulation and Metadata Management</p>
 
 <p class="footer">
     Daniel Wheeler &bull;
@@ -67,8 +67,9 @@ ideas by *C. Titus Brown*
 
 # Workflow Control {.step .alwaysshow data-y=2720 data-x=180}
 
-# Scientific Workflow {.step data-y=2000 data-x=500 data-scale=0.2}
+# Scientific Development Process {.step data-y=2000 data-x=500 data-scale=0.2}
 
+<br>
 <img class="center" src="images/workflow.png"></img>
 
 <!-- # {#versioncontrol .step .alwaysshow data-y=2910 data-x=-680 data-rotate-z="45"} -->
@@ -95,9 +96,9 @@ already integrated into the scientific development process
 ~~~~{.console}
 $ git init
 $ git add file.txt
-$ git ci -m "add file.txt"
+$ git commit -m "add file.txt"
 $ edit file.txt
-$ git ci -am "edit file.txt"
+$ git commit -am "edit file.txt"
 $ git log
 12e3c2618143 add file.txt
 e00433e69a43 edit file.txt
@@ -118,7 +119,7 @@ $ git push github master
 provide a **unique ID (SHA checksum)** for every workflow execution
 <br>
 <br>
-capture **meta-data**, not data
+capture **metadata**, not data
 <br>
 <br>
 **not** workflow control or version control
@@ -134,7 +135,7 @@ partial solution: **Sumatra**, a simulation management tool (not workflow)
 **doesn't change my workflow**
 <br>
 <br>
-records the **meta-data** (not the data): parameters, environment, data
+records the **metadata** (not the data): parameters, environment, data
 location, time stamps, commit message, duration, data hash
 <br>
 <br>
@@ -188,7 +189,7 @@ Repeats          : None
 high level data manipulation
 <br>
 <br>
-quickly mix parameters, meta-data and output data in a dataframe
+quickly mix parameters, metadata and output data in a dataframe
 <br>
 <br>
 save Sumatra records as HDF file

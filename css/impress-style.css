@@ -228,7 +228,7 @@ a:focus {
 }
 
 p.footer {
-    text-align: right;
+    text-align: center;
     font-size: 1.0em;
     margin-top: 4em;
     font-size: 34px;
@@ -238,6 +238,7 @@ p.footer {
     background:url('../images/nist_logo.png') bottom center no-repeat;
     background-position:fixed;
     background-color: rgb(215, 215, 215);
+    width: 1200px;
     opacity: 1;
 }
 
@@ -304,7 +305,7 @@ p.footer {
     height: 700px;
 }
 
-#webinterface2{
+#webinterface2 {
     width: 1800px; 
     height: 1000px;
 }
