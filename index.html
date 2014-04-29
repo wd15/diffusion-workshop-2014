@@ -21,7 +21,7 @@
 <section id="title" class="level1 step" data-y="-2500" data-scale="4">
 <h1><a href="#title"></a></h1>
 <p class="title">
-Simulation and Data Management
+Simulation and Metadata Management
 </p>
 
 <p class="footer">
@@ -67,9 +67,9 @@ where you provide the metadata to run your analysis while you're working on your
 <section id="workflow-control" class="level1 step alwaysshow" data-y="2720" data-x="180">
 <h1><a href="#workflow-control">Workflow Control</a></h1>
 </section>
-<section id="scientific-workflow" class="level1 step" data-y="2000" data-x="500" data-scale="0.2">
-<h1><a href="#scientific-workflow">Scientific Workflow</a></h1>
-<p><img class="center" src="images/workflow.png"></img></p>
+<section id="scientific-development-process" class="level1 step" data-y="2000" data-x="500" data-scale="0.2">
+<h1><a href="#scientific-development-process">Scientific Development Process</a></h1>
+<p><br> <img class="center" src="images/workflow.png"></img></p>
 <!-- # {#versioncontrol .step .alwaysshow data-y=2910 data-x=-680 data-rotate-z="45"} -->
 
 </section>
@@ -87,9 +87,9 @@ where you provide the metadata to run your analysis while you're working on your
 <h1><a href="#easy-to-use">Easy to use</a></h1>
 <pre class="console"><code>$ git init
 $ git add file.txt
-$ git ci -m &quot;add file.txt&quot;
+$ git commit -m &quot;add file.txt&quot;
 $ edit file.txt
-$ git ci -am &quot;edit file.txt&quot;
+$ git commit -am &quot;edit file.txt&quot;
 $ git log
 12e3c2618143 add file.txt
 e00433e69a43 edit file.txt
@@ -109,14 +109,14 @@ $ git push github master</code></pre>
 </section>
 <section id="section-2" class="level1 step" data-rotate-z="-45" data-y="2700" data-x="560">
 <h1><a href="#section-2"></a></h1>
-<p><br> provide a <strong>unique ID (SHA checksum)</strong> for every workflow execution <br> <br> capture <strong>meta-data</strong>, not data <br> <br> <strong>not</strong> workflow control or version control <br> <br> partial solution: <strong>Sumatra</strong>, a simulation management tool (not workflow)</p>
+<p><br> provide a <strong>unique ID (SHA checksum)</strong> for every workflow execution <br> <br> capture <strong>metadata</strong>, not data <br> <br> <strong>not</strong> workflow control or version control <br> <br> partial solution: <strong>Sumatra</strong>, a simulation management tool (not workflow)</p>
 </section>
 <section id="section-3" class="level1 step alwaysshow" data-y="2500">
 <h1><a href="#section-3"></a></h1>
 </section>
 <section id="sumatra" class="level1 step" data-x="-1000" data-y="1200" data-scale="0.5">
 <h1><a href="#sumatra">Sumatra</a></h1>
-<p><br> <strong>doesn't change my workflow</strong> <br> <br> records the <strong>meta-data</strong> (not the data): parameters, environment, data location, time stamps, commit message, duration, data hash <br> <br> generates <strong>unique ID</strong> for each simulation</p>
+<p><br> <strong>doesn't change my workflow</strong> <br> <br> records the <strong>metadata</strong> (not the data): parameters, environment, data location, time stamps, commit message, duration, data hash <br> <br> generates <strong>unique ID</strong> for each simulation</p>
 </section>
 <section id="easytouse1" class="level1 step" data-x="-200" data-y="1200" data-scale="0.5">
 <h1><a href="#easytouse1">Easy to use</a></h1>
@@ -159,7 +159,7 @@ Repeats          : None</code></pre>
 </section>
 <section id="sumatra-ipython-pandas" class="level1 step" data-x="1800" data-y="1200" data-scale="0.5">
 <h1><a href="#sumatra-ipython-pandas">Sumatra + IPython + Pandas</a></h1>
-<p><br> high level data manipulation <br> <br> quickly mix parameters, meta-data and output data in a dataframe <br> <br> save Sumatra records as HDF file <br> <br> disseminate instantly using <a href="http://nbviewer.ipython.org/">nbviewer.ipython.org</a></p>
+<p><br> high level data manipulation <br> <br> quickly mix parameters, metadata and output data in a dataframe <br> <br> save Sumatra records as HDF file <br> <br> disseminate instantly using <a href="http://nbviewer.ipython.org/">nbviewer.ipython.org</a></p>
 </section>
 <section id="usingpandas" class="level1 step" data-x="2800" data-y="1200" data-scale="0.5">
 <h1><a href="#usingpandas">Using Pandas</a></h1>
@@ -178,7 +178,7 @@ $ ipython</code></pre>
 ...
 &gt;&gt;&gt; custom_df.to_hdf(<span class="st">&#39;records.h5&#39;</span>)</code></pre>
 </section>
-<section id="webinterface2" class="level1 step" data-x="3800" data-py="1200" data-scale="0.5">
+<section id="webinterface2" class="level1 step" data-x="3800" data-y="1200" data-scale="0.5">
 <h1><a href="#webinterface2">Using IPython</a></h1>
 <iframe width="100%" height="100%" src="http://wd15.github.io/2013/05/07/extremefill2d/" frameborder="0" border="0"> </iframe>
 
