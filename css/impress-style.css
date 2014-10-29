@@ -213,7 +213,7 @@ a:focus {
 
 .title {
     text-align: center;
-    font-size: 100px;
+    font-size: 80px;
 }
 
 .author { 
@@ -238,7 +238,7 @@ p.footer {
     background:url('../images/nist_logo.png') bottom center no-repeat;
     background-position:fixed;
     background-color: rgb(215, 215, 215);
-    width: 1200px;
+    width: 900px;
     opacity: 1;
 }
 
@@ -282,7 +282,7 @@ p.footer {
 }
 
 #vc {
-     width: 1200px; 
+     width: 900px; 
 }
 
 #easytouse1 {
@@ -296,8 +296,8 @@ p.footer {
 }
 
 #webinterface {
-    width: 1800px; 
-    height: 1000px;
+    width: 1200px; 
+    height: 800px;
 }
 
 #usingpandas {
@@ -306,8 +306,8 @@ p.footer {
 }
 
 #webinterface2 {
-    width: 1800px; 
-    height: 1000px;
+    width: 1000px; 
+    height: 800px;
 }
 
 #thanks {
